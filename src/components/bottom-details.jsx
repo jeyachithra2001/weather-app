@@ -15,7 +15,7 @@ function Details(props) {
                 </div>
                 <div className="detail__item__flex">
                     <div>
-                        <span>🌡</span>
+                        <span>👁</span>
                     </div>
                     <div>
                         <p>Visiblity</p>
@@ -24,7 +24,7 @@ function Details(props) {
                 </div>
                 <div className="detail__item__flex">
                     <div>
-                        <span>🌡</span>
+                        <span>⏲</span>
                     </div>
                     <div>
                         <p>Pressure</p>
@@ -33,7 +33,7 @@ function Details(props) {
                 </div>
                 <div className="detail__item__flex">
                     <div>
-                        <span>🌡</span>
+                        <span>☁︎</span>
                     </div>
                     <div>
                         <p>Clouds</p>
