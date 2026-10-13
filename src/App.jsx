@@ -5,7 +5,7 @@ import Quote from "./components/quote"
 import Weather from "./components/weather"
 
 const fetchWeatherData = (city) => {
-  const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY
+  const apiKey = "0f9e93e6a081b5ac1c3a226b737b223a"
   if (!apiKey) {
     throw new Error("Missing OpenWeather API key. Set VITE_OPENWEATHER_API_KEY in .env.local.")
   }
@@ -29,7 +29,6 @@ function App() {
   const [pressure, setPressure] = useState("")
   const [clouds, setClouds] = useState("")
   const [loading, setLoading] = useState(true)
-  const [hasWeather, setHasWeather] = useState(false)
   const [cityNotFound, setCityNotFound] = useState(false)
   const [error, setError] = useState(null)
   const applyWeatherData = useCallback((data) => {
@@ -43,7 +42,6 @@ function App() {
     setVis(data.visibility)
     setPressure(data.main.pressure)
     setClouds(data.clouds.all)
-    setHasWeather(true)
   }, [])
 
   const handleFetchError = useCallback((error) => {
@@ -89,8 +87,8 @@ function App() {
 
   return (
     <>
-      {hasWeather && !cityNotFound && !error &&
-        <main className={`weather-page${loading ? " is-refreshing" : ""}`} aria-busy={loading}>
+      {!loading && !cityNotFound && !error &&
+        <main className="weather-page" aria-busy={loading}>
           <Weather city={city} setCity={setCity} handleKeydown={handleKeydown} handleSearch={handleSearch} deg={deg}
             main={main} feellike={feellike} humidity={humidity} wind={wind} long={long}
             lat={lat} />
@@ -98,9 +96,9 @@ function App() {
           <Quote />
         </main>
       }
-      {loading && <div className={hasWeather ? "refresh-loading" : "loading"} role="status">
+      {loading && <div className="loading" role="status">
         <span className="loading-spinner" aria-hidden="true">⟳</span>
-        {hasWeather ? "Updating weather..." : "Loading weather..."}
+        Loading weather...
       </div>}
       {cityNotFound && <div className='cityNotFound'>Invalid City Name</div>}
       {error && <div className='error'>{error}</div>}
