@@ -2,6 +2,10 @@
 
 A responsive Weather Report Application built using React.js and the OpenWeatherMap API. This application allows users to search for any city and view its current weather conditions along with detailed weather information.
 
+## Live demo
+
+(https://weather-app-gamma-rouge-76.vercel.app/)
+
 ## ✨ Features
 
 - 🔍 Search weather by city name.
@@ -115,10 +119,6 @@ weather-app/
 ## 🎯 Project Objective
 
 The objective of this project is to develop a responsive weather application using React.js and API integration to retrieve and display real-time weather information based on the user's city search.
-
-## Live demo
-
-(https://weather-app-gamma-rouge-76.vercel.app/)
 
 ## 🔗 API Documentation
 
