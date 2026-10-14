@@ -5,8 +5,8 @@ function Quote(){
                 <span> 🍁 </span>
             </div>
             <div>
-                <p>Good Weather Today!</p>
-                <p>Perfect day for outdoor activities.</p>
+                <p>No matter the weather, make today beautiful!</p>
+                <p>Every day brings its own weather magic.</p>
             </div>
         </div>
     )

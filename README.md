@@ -116,6 +116,10 @@ weather-app/
 
 The objective of this project is to develop a responsive weather application using React.js and API integration to retrieve and display real-time weather information based on the user's city search.
 
+## Live demo
+
+(https://weather-app-gamma-rouge-76.vercel.app/)
+
 ## 🔗 API Documentation
 
 [OpenWeatherMap API](https://openweathermap.org/api)
